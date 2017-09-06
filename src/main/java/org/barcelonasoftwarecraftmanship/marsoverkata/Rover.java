@@ -41,6 +41,11 @@ public class Rover {
             case EAST:
                 this.currentPosition = new Position(1, 0);
                 break;
+            case SOUTH:
+                this.currentPosition = new Position(0, -1);
+                break;
+            case WEST:
+                this.currentPosition = new Position(-1, 0);
         }
     }
 }
