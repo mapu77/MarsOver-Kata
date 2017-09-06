@@ -1,6 +1,10 @@
 ### MarsOver Kata
 This is my approach written in Java from the [MarsOver kata](https://technologyconversations.com/2014/10/17/java-tutorial-through-katas-mars-rover/)
 
+Every commit shows the baby steps followed to resolve this kata.
+
+* * * 
+
 Develop an api that moves a rover around on a grid.
 
 Rules:
