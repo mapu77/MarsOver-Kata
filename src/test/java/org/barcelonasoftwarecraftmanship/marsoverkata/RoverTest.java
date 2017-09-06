@@ -20,9 +20,15 @@ public class RoverTest {
     }
 
     @Test
-    public void givenNoInitialOrientation_whenAskForCurrentPosition_thenRoverReturnsZeroZero() throws Exception {
+    public void givenNoInitialPosition_whenAskForCurrentPosition_thenRoverReturnsZeroZero() throws Exception {
         Rover rover = new Rover();
         assertThat(rover.getX(), is(0));
         assertThat(rover.getY(), is(0));
+    }
+
+    @Test
+    public void givenAnInitialOrientation_whenAskForCurrentOrientation_thenRoverReturnsNorthOrientation() throws Exception {
+        Rover rover = new Rover();
+        assertThat(rover.getCurrentOrientation(), is(Orientation.NORTH));
     }
 }
