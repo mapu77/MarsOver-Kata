@@ -8,6 +8,7 @@ public class Rover {
     public Rover() {
         this.x = 0;
         this.y = 0;
+        this.currentOrientation = Orientation.NORTH;
     }
 
     public Rover(int x, int y) {
