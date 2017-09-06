@@ -5,6 +5,10 @@ public class Rover {
     private Integer y;
     private Orientation currentOrientation;
 
+    public Rover() {
+
+    }
+
     public Rover(int x, int y) {
         this.x = x;
         this.y = y;

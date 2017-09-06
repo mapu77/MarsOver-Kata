@@ -18,4 +18,11 @@ public class RoverTest {
         Rover rover = new Rover(Orientation.NORTH);
         assertThat(rover.getCurrentOrientation(), is(Orientation.NORTH));
     }
+
+    @Test
+    public void givenNoInitialOrientation_whenAskForCurrentPosition_thenRoverReturnsZeroZero() throws Exception {
+        Rover rover = new Rover();
+        assertThat(rover.getX(), is(0));
+        assertThat(rover.getY(), is(0));
+    }
 }
