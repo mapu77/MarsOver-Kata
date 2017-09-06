@@ -28,7 +28,7 @@ public class RoverTest {
     }
 
     @Test
-    public void givenAnInitialOrientation_whenAskForCurrentOrientation_thenRoverReturnsNorthOrientation() throws Exception {
+    public void givenNoInitialOrientation_whenAskForCurrentOrientation_thenRoverReturnsNorthOrientation() throws Exception {
         Rover rover = new Rover();
         assertThat(rover.getCurrentOrientation(), is(Orientation.NORTH));
     }
