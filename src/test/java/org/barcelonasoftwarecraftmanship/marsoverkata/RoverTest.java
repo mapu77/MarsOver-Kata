@@ -23,8 +23,8 @@ public class RoverTest {
     @Test
     public void givenNoInitialPosition_whenAskForCurrentPosition_thenRoverReturnsZeroZero() throws Exception {
         Rover rover = new Rover();
-        assertThat(rover.getX(), is(0));
-        assertThat(rover.getY(), is(0));
+        assertThat(rover.getCurrentPosition().getX(), is(0));
+        assertThat(rover.getCurrentPosition().getY(), is(0));
     }
 
     @Test
