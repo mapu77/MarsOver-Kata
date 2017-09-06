@@ -11,6 +11,7 @@ public class Rover {
 
     public Rover(Orientation orientation) {
         this.currentOrientation = orientation;
+        this.currentPosition = new Position(0, 0);
     }
 
     public Rover(Position position) {
@@ -36,16 +37,16 @@ public class Rover {
     public void moveForward() {
         switch (currentOrientation) {
             case NORTH:
-                this.currentPosition = new Position(0, 1);
+                this.currentPosition = new Position(0, currentPosition.getY() + 1);
                 break;
             case EAST:
-                this.currentPosition = new Position(1, 0);
+                this.currentPosition = new Position(currentPosition.getX() + 1, 0);
                 break;
             case SOUTH:
-                this.currentPosition = new Position(0, -1);
+                this.currentPosition = new Position(0, currentPosition.getY() - 1);
                 break;
             case WEST:
-                this.currentPosition = new Position(-1, 0);
+                this.currentPosition = new Position(currentPosition.getX() - 1, 0);
         }
     }
 }
