@@ -32,7 +32,7 @@ public class RoverTest {
 
     @Test
     public void givenANorthOrientedRoverAndAForwardMove_whenAskForCurrentPosition_thenRoverReturnsZeroOne() throws Exception {
-        Rover rover = new Rover();
+        Rover rover = new Rover(Orientation.NORTH);
         rover.moveForward();
         assertThat(rover.getCurrentPosition(), is(new Position(0, 1)));
     }
@@ -56,5 +56,13 @@ public class RoverTest {
         Rover rover = new Rover(Orientation.WEST);
         rover.moveForward();
         assertThat(rover.getCurrentPosition(), is(new Position(-1, 0)));
+    }
+
+    @Test
+    public void givenANorthOrientedRoverAndTwoForwardMoves_whenAskForCurrentPosition_thenRoverReturnsZeroTwo() {
+        Rover rover = new Rover(Orientation.NORTH);
+        rover.moveForward();
+        rover.moveForward();
+        assertThat(rover.getCurrentPosition(), is(new Position(0, 2)));
     }
 }
