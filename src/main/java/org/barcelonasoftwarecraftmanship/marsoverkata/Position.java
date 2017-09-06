@@ -24,4 +24,21 @@ public class Position {
     public void setY(Integer y) {
         this.y = y;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Position position = (Position) o;
+
+        return (x != null ? x.equals(position.x) : position.x == null) && (y != null ? y.equals(position.y) : position.y == null);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = x != null ? x.hashCode() : 0;
+        result = 31 * result + (y != null ? y.hashCode() : 0);
+        return result;
+    }
 }
