@@ -1,20 +1,12 @@
 package org.barcelonasoftwarecraftmanship.marsoverkata;
 
 public class Rover {
-    private Integer x;
-    private Integer y;
-    private Orientation currentOrientation;
     private Position currentPosition;
+    private Orientation currentOrientation;
 
     public Rover() {
-        this.x = 0;
-        this.y = 0;
+        this.currentPosition = new Position(0, 0);
         this.currentOrientation = Orientation.NORTH;
-    }
-
-    public Rover(int x, int y) {
-        this.x = x;
-        this.y = y;
     }
 
     public Rover(Orientation orientation) {
@@ -22,15 +14,7 @@ public class Rover {
     }
 
     public Rover(Position position) {
-
-    }
-
-    public Integer getX() {
-        return x;
-    }
-
-    public Integer getY() {
-        return y;
+        this.currentPosition = position;
     }
 
     public Orientation getCurrentOrientation() {
