@@ -4,6 +4,7 @@ public class Rover {
     private Integer x;
     private Integer y;
     private Orientation currentOrientation;
+    private Position currentPosition;
 
     public Rover() {
         this.x = 0;
@@ -20,6 +21,10 @@ public class Rover {
         this.currentOrientation = orientation;
     }
 
+    public Rover(Position position) {
+
+    }
+
     public Integer getX() {
         return x;
     }
@@ -34,5 +39,13 @@ public class Rover {
 
     public void setCurrentOrientation(Orientation currentOrientation) {
         this.currentOrientation = currentOrientation;
+    }
+
+    public Position getCurrentPosition() {
+        return currentPosition;
+    }
+
+    public void setCurrentPosition(Position currentPosition) {
+        this.currentPosition = currentPosition;
     }
 }

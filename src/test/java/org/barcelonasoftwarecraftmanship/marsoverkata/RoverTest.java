@@ -7,10 +7,11 @@ import static org.hamcrest.core.Is.is;
 
 public class RoverTest {
     @Test
-    public void givenAnInitialPoint_whenAskForCurrentPosition_thenRoverReturnsTheInitialPosition() throws Exception {
-        Rover rover = new Rover(3,4);
-        assertThat(rover.getX(), is(3));
-        assertThat(rover.getY(), is(4));
+    public void givenAnInitialPosition_whenAskForCurrentPosition_thenRoverReturnsTheInitialPosition() throws Exception {
+        Rover rover = new Rover(new Position(3, 4));
+        assertThat(rover.getCurrentPosition().getX(), is(3));
+        assertThat(rover.getCurrentPosition().getY(), is(4));
+
     }
 
     @Test
