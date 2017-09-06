@@ -34,6 +34,6 @@ public class Rover {
     }
 
     public void moveForward() {
-
+        this.currentPosition = new Position(0, 1);
     }
 }
