@@ -68,9 +68,9 @@ public class RoverTest {
 
 
     @Test
-    public void givenANorthOrientedRover_whenAskToMoveBackward_thenRoversCurrentPositionReturnsMinusOneZero() throws Exception {
+    public void givenANorthOrientedRover_whenAskToMoveBackward_thenRoversCurrentPositionReturnsOneZero() throws Exception {
         Rover rover = new Rover(Orientation.NORTH);
         rover.moveBackward();
-        assertThat(rover.getCurrentPosition(), is(new Position(-1, 0)));
+        assertThat(rover.getCurrentPosition(), is(new Position(1, 0)));
     }
 }
