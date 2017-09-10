@@ -31,35 +31,35 @@ public class RoverTest {
     }
 
     @Test
-    public void givenANorthOrientedRoverAndAForwardMove_whenAskForCurrentPosition_thenRoverReturnsZeroOne() throws Exception {
+    public void givenANorthOrientedRover_whenAskToMoveForward_thenRoversCurrentPositionReturnsZeroOne() throws Exception {
         Rover rover = new Rover(Orientation.NORTH);
         rover.moveForward();
         assertThat(rover.getCurrentPosition(), is(new Position(0, 1)));
     }
 
     @Test
-    public void givenAnEastOrientedRoverAndAForwardMove_whenAskForCurrentPosition_thenRoverReturnsOneZero() throws Exception {
+    public void givenAnEastOrientedRover_whenAskToMoveForward_thenRoversCurrentPositionReturnsOneZero() throws Exception {
         Rover rover = new Rover(Orientation.EAST);
         rover.moveForward();
         assertThat(rover.getCurrentPosition(), is(new Position(1, 0)));
     }
 
     @Test
-    public void givenASouthOrientedRoverAndAForwardMove_whenAskForCurrentPosition_thenRoverReturnsZeroMinusOne() throws Exception {
+    public void givenASouthOrientedRover_whenAskToMoveForward_thenRoversCurrentPositionReturnsZeroMinusOne() throws Exception {
         Rover rover = new Rover(Orientation.SOUTH);
         rover.moveForward();
         assertThat(rover.getCurrentPosition(), is(new Position(0, -1)));
     }
 
     @Test
-    public void givenAWestOrientedRoverAndAForwardMove_whenAskForCurrentPosition_thenRoverReturnsMinusOneZero() throws Exception {
+    public void givenAWestOrientedRover_whenAskToMoveForward_thenRoversCurrentPositionReturnsMinusOneZero() throws Exception {
         Rover rover = new Rover(Orientation.WEST);
         rover.moveForward();
         assertThat(rover.getCurrentPosition(), is(new Position(-1, 0)));
     }
 
     @Test
-    public void givenANorthOrientedRoverAndTwoForwardMoves_whenAskForCurrentPosition_thenRoverReturnsZeroTwo() {
+    public void givenANorthOrientedRover_whenAskToMoveForwardTwoTimes_thenRoversCurrentPositionReturnsZeroTwo() {
         Rover rover = new Rover(Orientation.NORTH);
         rover.moveForward();
         rover.moveForward();
