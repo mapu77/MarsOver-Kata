@@ -49,4 +49,8 @@ public class Rover {
                 this.currentPosition = new Position(currentPosition.getX() - 1, 0);
         }
     }
+
+    public void moveBackward() {
+
+    }
 }
